@@ -3,42 +3,32 @@
     box-sizing: border-box;
 }
 
-/*convert the contaner to a flexbox*/
+body{
+    margin: 0; 
+    background-color:aliceblue;  
+}
+
+.container::after {
+  content: "";
+  width: 860px;
+}
+/*convert the container to a flexbox, add spacing and aligment*/
 .container{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 10px;
+    max-width: 1500px;
+    margin: 0 auto;
+    gap: 16px;
 }
 
-.container > div{
-    
-}
-
-/*.column:nth-child(1){
-    background-color: skyblue;
-}
-
-.column:nth-child(2){
-    background-color: palevioletred;
-}
-
-.column:nth-child(3){
-    background-color: green;
-}
-
-.column:nth-child(4){
-    background-color: lightcoral;
-}*/
-
-.column{
-    flex: 1;
-    min-width: 300px;
-}
-
-img{
+/* size images and fit to space */
+.container img{
     width: 100%;
-}
-
-.testDiv{
-    width: 100px;
-    background-color: greenyellow;
+    max-width: 350px;
+    object-fit: cover;
+    border-radius: 10px;
 }
